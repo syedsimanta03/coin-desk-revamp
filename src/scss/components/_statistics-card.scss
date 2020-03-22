@@ -1,0 +1,15 @@
+.statistics-card {
+  width: 100%;
+  max-width: 70rem;
+  height: auto;
+  padding: 2rem;
+  border-radius: 1.3rem;
+  background: rgb(255, 255, 255);
+  box-shadow: $mild-shadow;
+
+  &__line-chart {
+    position: relative;
+    width: 100%;
+    height: 23rem;
+  }
+}

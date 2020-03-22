@@ -1,0 +1,56 @@
+.coins {
+  &__logo-wrapper {
+    width: 5.3rem;
+    height: 5.2rem;
+
+    background: #ffffff;
+    border-radius: 1.4rem;
+    box-shadow: $mild-shadow;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:first-child) {
+      margin-left: 2rem;
+      @include mq(31.25em) {
+        margin-left: 1rem;
+      }
+    }
+
+    &--bitcoin {
+      fill: white;
+      @include linear($color-secondary, $color-secondary-dark);
+    }
+
+    &--etherum {
+      fill: white;
+      @include linear($color-primary, $color-primary-dark);
+    }
+
+    &--litcoin {
+      fill: $color-tertiary-dark;
+    }
+
+    &--monero {
+      fill: #fc9f74;
+    }
+
+    &--dash {
+      fill: #6629fa;
+    }
+
+    &--add {
+      box-shadow: none;
+      background: none;
+      border: 2px dotted $color-text-secondary;
+      padding: 1.3rem 1rem;
+      fill: $color-text-secondary;
+    }
+  }
+
+  &__logo {
+    height: 2.9rem;
+    width: 2.4rem;
+  }
+}

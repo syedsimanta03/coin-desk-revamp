@@ -1,0 +1,86 @@
+body {
+  display: flex;
+  align-items: stretch;
+  background-color: $color-body;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 3.5rem 10rem;
+
+  @include mq($bp-sidebar-hide) {
+    padding: 13rem 3rem 10rem;
+  }
+
+  @include mq($bp-smallest) {
+    padding: 13rem 1rem 10rem;
+  }
+}
+
+.sidebar-wrapper {
+  position: relative;
+  flex: 0 0 24rem;
+
+  //TOGGLE SIDEBAR
+  @include mq($bp-sidebar-hide) {
+    flex: none;
+    position: static;
+
+    &.active .sidebar {
+      box-shadow: 1rem 0 3rem rgba(0, 0, 0, 0.233);
+      transform: translateX(0);
+    }
+
+    &.active::after {
+      opacity: 1;
+    }
+  }
+
+  // overlay below sidebar
+  &:after {
+    content: "";
+    position: fixed;
+    background: rgba(0, 0, 0, 0.377);
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+}
+
+//////////////////////////////////////////////////
+// MOBILE MENU
+/////////////////////////////////////////////////
+.mobile-menu {
+  display: none;
+
+  @include mq($bp-sidebar-hide) {
+    display: initial;
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    padding: 1rem;
+
+    cursor: pointer; //TODO: change this in touchscreen
+
+    @include linear($color-primary, $color-primary-dark);
+
+    &:active {
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.24);
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: white;
+  }
+}

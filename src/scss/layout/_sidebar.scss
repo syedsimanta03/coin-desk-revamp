@@ -1,0 +1,61 @@
+.sidebar {
+  height: 100vh;
+  width: 24rem;
+  position: fixed;
+  background-color: $color-sidebar;
+  border-right: 1px solid #e8e8e8;
+  transition: 0.2s all ease-out;
+  z-index: 11;
+
+  display: flex;
+  flex-direction: column;
+
+  @include mq($bp-sidebar-hide) {
+    transform: translateX(-100%);
+  }
+
+  &__brand {
+    margin-top: 4.5rem;
+    margin-bottom: 9rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__nav {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding-left: 2rem;
+  }
+
+  &__footer {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.7;
+    text-align: center;
+    color: #5a5a5a;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+    margin-top: auto;
+
+    a {
+      text-decoration: none;
+      color: $color-primary;
+    }
+  }
+
+  // for landscape devices
+  @media (max-width: $bp-sidebar-hide) and (orientation: landscape) {
+    overflow-y: auto;
+
+    &__brand {
+      min-height: 10rem;
+    }
+
+    &__nav {
+      min-height: 25rem;
+      margin-bottom: 9rem;
+    }
+  }
+}

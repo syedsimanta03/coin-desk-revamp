@@ -1,0 +1,92 @@
+.coins {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    margin-top: 2rem;
+  }
+
+  &__title-box {
+    margin-top: 0;
+  }
+
+  &__logo-box {
+    width: 100%;
+    margin-top: 4rem;
+    display: flex;
+  }
+
+  .share-box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 4rem;
+
+    @include mq($bp-stock-cards) {
+      flex-wrap: wrap;
+    }
+
+    @include mq($bp-stock-cards-small) {
+      justify-content: center;
+      margin-top: 10rem;
+    }
+  }
+
+  .pull-content-to-flex-start {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .share-card {
+    height: 20rem;
+    align-items: flex-start;
+    display: flex;
+    max-width: 40rem;
+    flex: 0 0 32%;
+
+    @include mq($bp-stock-cards) {
+      flex: 0 0 48%;
+    }
+    @include mq($bp-stock-cards-small) {
+      flex: 0 0 100%;
+      height: 22rem;
+    }
+
+    &:nth-child(2) {
+      margin-left: 1%;
+      margin-right: auto;
+
+      @include mq($bp-stock-cards) {
+        margin-left: 4%;
+      }
+      @include mq($bp-stock-cards-small) {
+        margin-top: 3rem;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .share-box__visa-box {
+    flex: 0 0 32%;
+    height: auto;
+    margin-top: -5rem;
+    max-width: 36rem;
+
+    @include mq($bp-stock-cards) {
+      flex-wrap: wrap;
+      margin-top: 7rem;
+      flex: 0 0 100%;
+    }
+  }
+
+  .visa-box__title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $color-text-primary;
+  }
+}
