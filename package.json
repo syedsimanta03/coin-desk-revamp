@@ -1,11 +1,9 @@
 {
   "name": "coin-dashboard",
-  "version": "0.1",
-  "description": "a fiction coin-dashboard app",
+  "description": "coin-dashboard app",
   "main": "index.html",
-  "homepage": "https://ruhulwebdev.github.io/coindesk/",
-  "repository": "https://github.com/ruhulwebdev/coindesk",
-  "author": "ruhulwebdev <ruhulamin.webdev@gmail.com>",
+  "homepage": "https://syedsimanta03.github.io/coin-desk-revamp",
+  "repository": "https://github.com/syedsimanta03/coin-desk-revamp",
   "license": "MIT",
   "private": false,
   "devDependencies": {
