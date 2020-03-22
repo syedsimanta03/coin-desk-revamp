@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./script.0be532e4.css" />
+    <link rel="stylesheet" href="./mystyle.css" />
   </head>
   <body>
     <div class="mobile-menu">
@@ -152,51 +153,18 @@
         </section>
         <div class="share-box">
           <section class="share-card share-card--bitcoin">
+          <canvas class="charti" id="myChart" width="400" height="200"></canvas>
             <div class="pull-content-to-flex-start">
-              <div class="share-card__brand">
-                <div
-                  class="coins__logo-wrapper coins__logo-wrapper--bitcoin share-card__logo"
-                >
-                  <svg
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    class="coins__logo"
-                  >
-                    <use
-                      xlink:href="./sprite.e7f413c8.svg#icon-bitcoin"
-                    ></use>
-                  </svg>
-                </div>
-                <div class="share-card__title-box">
-                  <div class="share-card__title">Bitcoin</div>
-                  <div class="share-card__title--short">BTC</div>
-                </div>
-              </div>
               <div class="share-card__current-share">
                 <div class="share-card__balance">$8513.88</div>
                 <div class="share-card__share">&Downarrow; 8.45</div>
+                
               </div>
             </div>
           </section>
           <section class="share-card share-card--etherum">
+                <canvas class="charti" id="myChartt" width="400" height="200"></canvas>
             <div class="pull-content-to-flex-start">
-              <div class="share-card__brand">
-                <div
-                  class="coins__logo-wrapper coins__logo-wrapper--etherum share-card__logo"
-                >
-                  <svg
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    class="coins__logo"
-                  >
-                    <use
-                      xlink:href="./sprite.e7f413c8.svg#icon-ethereum"
-                    ></use>
-                  </svg>
-                </div>
-                <div class="share-card__title-box">
-                  <div class="share-card__title">Etherum</div>
-                  <div class="share-card__title--short">ETH</div>
-                </div>
-              </div>
               <div class="share-card__current-share">
                 <div class="share-card__balance">$8513.88</div>
                 <div class="share-card__share">&Uparrow; 8.45</div>
@@ -408,5 +376,7 @@
       </div>
     </main>
     <script src="./script.59e5eb22.js"></script>
+    <script src="./chart.js"></script>
+    <script src="./chartt.js"></script>
   </body>
 </html>
